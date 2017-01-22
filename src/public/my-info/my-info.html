@@ -1,0 +1,16 @@
+   <div ng-if="reg.user">
+
+    <div id="info" style="padding-left: 20px">
+      Firstname: {{ reg.user.firstname}} <br>
+      Lastname: {{ reg.user.lastname}} <br>
+      Email: {{ reg.user.email}} <br>
+      Phone: {{ reg.user.phone }}<br>
+      Shortname: {{ reg.user.shortname}} 
+    </div>
+     <div style="text-align: center;">
+	      <span style="display: block;">{{reg.item.name}}</span>
+	      <img width="200" height="200" ng-src="images/menu/{{reg.item.category_short_name}}/{{reg.item.short_name}}.jpg" alt="{{reg.item.name}}">
+           <span style="display: block;">{{reg.item.description}}</span>
+     </div>
+   </div>
+   <span ng-if="!reg.user"><a style=" text-decoration: none; color: red; font-weight: bold;font-size: 2.1em; display: block; text-align: center;" ui-sref="signup">Sign up Now!</a></span>
